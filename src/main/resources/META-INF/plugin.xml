@@ -5,6 +5,7 @@
     <vendor>helloworldsg</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends optional="true">com.intellij.modules.java</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
@@ -18,6 +19,21 @@
                 class="com.github.helloworldsg.tokenforge.encoding.DecodeBase64Action"
                 text="Decode Base64"
                 description="Decode Base64">
+        </action>
+        <action id="com.github.helloworldsg.PemToJwkAction"
+                class="com.github.helloworldsg.tokenforge.encoding.PemToJwkAction"
+                text="PEM to JWK"
+                description="PEM to JWK">
+        </action>
+        <action id="com.github.helloworldsg.JwkToPemAction"
+                class="com.github.helloworldsg.tokenforge.encoding.JwkToPemAction"
+                text="JWK to PEM"
+                description="JWK to PEM">
+        </action>
+        <action id="com.github.helloworldsg.PrivatePemToPublicPemAction"
+                class="com.github.helloworldsg.tokenforge.encoding.PrivatePemToPublicPemAction"
+                text="Private PEM to Public PEM"
+                description="Private PEM to Public PEM">
         </action>
     </actions>
 

@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+    id("com.palantir.git-version") version "3.0.0"
 }
 
 group = properties("pluginGroup").get()
@@ -24,6 +25,7 @@ repositories {
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
 //    implementation(libs.annotations)
+    implementation("com.nimbusds:nimbus-jose-jwt:9.37.3")
 }
 
 // Set the JVM language level used to build the project.
