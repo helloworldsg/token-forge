@@ -14,8 +14,9 @@ plugins {
     id("com.palantir.git-version") version "3.0.0"
 }
 
+val gitVersion: groovy.lang.Closure<String> by extra
 group = properties("pluginGroup").get()
-version = properties("pluginVersion").get()
+version = gitVersion()
 
 // Configure project's dependencies
 repositories {
