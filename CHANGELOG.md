@@ -4,4 +4,6 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- PEM to JWK
+- JWK to PEM
+- Private PEM to Public PEM
