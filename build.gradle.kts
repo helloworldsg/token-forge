@@ -11,12 +11,10 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
-    id("com.palantir.git-version") version "3.0.0"
 }
 
-val gitVersion: groovy.lang.Closure<String> by extra
 group = properties("pluginGroup").get()
-version = gitVersion()
+version = properties("pluginVersion").get()
 
 // Configure project's dependencies
 repositories {
