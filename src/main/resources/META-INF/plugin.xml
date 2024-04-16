@@ -5,7 +5,6 @@
     <vendor>helloworldsg</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends optional="true">com.intellij.modules.java</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
