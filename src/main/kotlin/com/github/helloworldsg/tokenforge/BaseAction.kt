@@ -21,7 +21,7 @@ open class BaseAction : AnAction() {
 
         WriteCommandAction.runWriteCommandAction(
             project
-        ) { document.replaceString(start, end, transform(editor.getSelectionModel().getSelectedText().toString())) }
+        ) { document.replaceString(start, end, transform(editor.selectionModel.selectedText.toString())) }
         primaryCaret.removeSelection()
     }
 

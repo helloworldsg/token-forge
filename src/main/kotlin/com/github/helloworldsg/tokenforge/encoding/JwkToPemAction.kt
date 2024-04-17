@@ -10,11 +10,11 @@ import java.io.StringWriter
 class JwkToPemAction : BaseAction() {
     override fun transform(s: String): String {
         val jwk = RSAKey.parse(s)
-        if (jwk.isPrivate()) {
-            return formatPEM(jwk.toRSAPrivateKey());
+        if (jwk.isPrivate) {
+            return formatPEM(jwk.toRSAPrivateKey())
         }
 
-        return formatPEM(jwk.toRSAPublicKey());
+        return formatPEM(jwk.toRSAPublicKey())
     }
 
     private fun formatPEM(obj: Any): String {

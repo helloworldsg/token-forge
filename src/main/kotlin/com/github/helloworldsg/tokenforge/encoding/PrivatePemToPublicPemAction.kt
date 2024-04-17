@@ -10,7 +10,7 @@ import java.io.StringWriter
 class PrivatePemToPublicPemAction : BaseAction() {
     override fun transform(s: String): String {
         val jwk = RSAKey.parseFromPEMEncodedObjects(s)
-        return formatPEM(jwk.toRSAKey().toRSAPublicKey());
+        return formatPEM(jwk.toRSAKey().toRSAPublicKey())
     }
 
     private fun formatPEM(obj: Any): String {

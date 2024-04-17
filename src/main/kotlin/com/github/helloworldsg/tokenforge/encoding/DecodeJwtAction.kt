@@ -11,13 +11,13 @@ import kotlinx.serialization.json.jsonObject
 
 class DecodeJwtAction : BaseAction() {
     override fun transform(s: String): String {
-        val (header, payload, signature) = s.split('.')
+        val (header, payload, _) = s.split('.')
 
         val decodedHeader = Base64.from(header).decodeToString()
         val decodedPayload = Base64.from(payload).decodeToString()
         val jsonPayload = Json.parseToJsonElement(decodedPayload)
 
-        val mapper = ObjectMapper();
+        val mapper = ObjectMapper()
         val prettyHeader = mapper.readTree(decodedHeader).toPrettyString()
         val prettyPayload = mapper.readTree(decodedPayload).toPrettyString()
 
