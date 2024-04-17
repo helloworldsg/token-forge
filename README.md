@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.helloworldsg.tokenforge.svg)](https://plugins.jetbrains.com/plugin/com.github.helloworldsg.tokenforge)
 
 <!-- Plugin description -->
-RSA tools to manipulate keys:
+IntelliJ editor tools to manipulate keys and tokens:
 - PEM format to JWK format (with kid generation)
 - JWK format to PEM format
 - Private key to public key (PEM format)
