@@ -6,34 +6,45 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <actions>
-        <action id="com.github.helloworldsg.EncodeBase64Action"
-                class="com.github.helloworldsg.tokenforge.encoding.EncodeBase64Action"
-                text="Encode to Base64"
-                description="Encode to Base64">
-        </action>
-        <action id="com.github.helloworldsg.DecodeBase64Action"
-                class="com.github.helloworldsg.tokenforge.encoding.DecodeBase64Action"
-                text="Decode Base64"
-                description="Decode Base64">
-        </action>
-        <action id="com.github.helloworldsg.PemToJwkAction"
-                class="com.github.helloworldsg.tokenforge.encoding.PemToJwkAction"
-                text="PEM to JWK"
-                description="PEM to JWK">
-        </action>
-        <action id="com.github.helloworldsg.JwkToPemAction"
-                class="com.github.helloworldsg.tokenforge.encoding.JwkToPemAction"
-                text="JWK to PEM"
-                description="JWK to PEM">
-        </action>
-        <action id="com.github.helloworldsg.PrivatePemToPublicPemAction"
-                class="com.github.helloworldsg.tokenforge.encoding.PrivatePemToPublicPemAction"
-                text="Private PEM to Public PEM"
-                description="Private PEM to Public PEM">
-        </action>
+        <group id="TokenForge.Group.Main" text="Token Forge"
+               description="Group of Token Forge"
+               popup="true">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+
+            <action id="com.github.helloworldsg.EncodeBase64Action"
+                    class="com.github.helloworldsg.tokenforge.encoding.EncodeBase64Action"
+                    text="Encode Base64"
+                    description="Encode Base64">
+            </action>
+            <action id="com.github.helloworldsg.DecodeBase64Action"
+                    class="com.github.helloworldsg.tokenforge.encoding.DecodeBase64Action"
+                    text="Decode Base64"
+                    description="Decode Base64">
+            </action>
+            <separator/>
+            <action id="com.github.helloworldsg.DecodeJwtAction"
+                    class="com.github.helloworldsg.tokenforge.encoding.DecodeJwtAction"
+                    text="Decode JWT"
+                    description="Decode JWT">
+            </action>
+            <separator/>
+            <action id="com.github.helloworldsg.PemToJwkAction"
+                    class="com.github.helloworldsg.tokenforge.encoding.PemToJwkAction"
+                    text="PEM to JWK"
+                    description="Decode PEM to JWK">
+            </action>
+            <action id="com.github.helloworldsg.JwkToPemAction"
+                    class="com.github.helloworldsg.tokenforge.encoding.JwkToPemAction"
+                    text="JWK to PEM"
+                    description="Encode JWK to PEM">
+            </action>
+            <action id="com.github.helloworldsg.PrivatePemToPublicPemAction"
+                    class="com.github.helloworldsg.tokenforge.encoding.PrivatePemToPublicPemAction"
+                    text="Private PEM to Public PEM"
+                    description="Transform Private PEM to Public PEM">
+            </action>
+        </group>
     </actions>
 
 </idea-plugin>

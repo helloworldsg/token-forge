@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 ### Added
-- PEM to JWK
-- JWK to PEM
+- Base64 Encoding / Decoding
+- PEM to JWK, and vice versa
 - Private PEM to Public PEM
+- JWT Decoding

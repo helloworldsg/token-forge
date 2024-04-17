@@ -9,6 +9,9 @@ RSA tools to manipulate keys:
 - PEM format to JWK format (with kid generation)
 - JWK format to PEM format
 - Private key to public key (PEM format)
+- Decode JWT
+
+The actions can be found under the 'Edit' menu. For enhanced usability, you have the option to customize your own keyboard shortcuts.
 <!-- Plugin description end -->
 
 ---
